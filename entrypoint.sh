@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Add strict errors.
+set -eu
+
+# Variables.
+SWITCHES="$INPUT_FLAGS"
+SOURCE_PATH="$GITHUB_WORKSPACE/$INPUT_SOURCE"
+TARGET_PATH="$GITHUB_WORKSPACE/$INPUT_TARGET"
+
+# Deploy.
+sh -c "rsync $SWITCHES $SOURCE_PATH $TARGET_PATH"

@@ -1,0 +1,19 @@
+name: "Rsync Action"
+description: "GitHub Action for copying code via Rsync"
+author: "philprime"
+inputs:
+  flags:
+    description: "The flags"
+    required: true
+  source:
+    description: "The local source path"
+    required: true
+  target:
+    description: "The local target path"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "send"
+  color: "gray-dark"
